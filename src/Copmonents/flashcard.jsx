@@ -1,10 +1,11 @@
 import React from 'react';
 
 function Flashcard(props) {
-    let card = props
+    let card = props.card;
+    console.log(card);
     return (
         <div className="cardGrid">
-            {card.name}
+          <div>{card}</div>  
 
         </div>
     );
