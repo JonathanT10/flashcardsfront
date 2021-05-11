@@ -2,9 +2,7 @@ import React from 'react';
 import './flashcard.css';
 
 function Flashcard(props) {
-    let cards = props.history;
-    let index = 0
-    let card = cards.slice(0)
+    let card = props.category;
     console.log(card);
     
     return (

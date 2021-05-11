@@ -9,7 +9,7 @@ class App extends Component {
         super(props);
         this.state = { 
             collection: [],
-            history: [],
+            choice: [],
             science: [],
             algebra: []
          }
@@ -32,20 +32,26 @@ class App extends Component {
     //     console.log(this.state.history);
     // }
 
-     collButton(collName){
+   collButton(collName){
+       do{
         let pickedColl = this.state.collection.filter(collName => {
+            this.setState({
+                choice: collName.cardCollection
+            })
             console.log(collName);
-            return collName;
-        })
+        
+        return collName;
+       })
+        }
+    while(this.state.choice = undefined);
     }
+   
 
-    nextButton() {
-
-    }
+  
     
 
     render() {
-       
+
         return (
             <div>
             <h3><Nav /></h3>
@@ -54,8 +60,8 @@ class App extends Component {
             
                <h2><Collections collection={this.state.collection} 
                             btn={() => this.collButton()}/></h2> 
-                             <h2></h2>   
-             {/* <h2><Flashcard history={this.state.history}/></h2>  */}
+             
+               <h2><Flashcard category = {this.state.category}/></h2> 
             </div>
         );
     }
