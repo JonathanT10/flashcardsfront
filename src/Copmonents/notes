@@ -1,0 +1,3 @@
+
+
+onClick = {this.collButton(coll.name)}

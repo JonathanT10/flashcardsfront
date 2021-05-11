@@ -1,40 +1,19 @@
-.card-container .card {
+.card-container {
     cursor: pointer;
-    height: 150px;
-    width: 400px;
-    perspective: 800px;
-    position: relative;
-   
-    word-wrap: break-word;
+    height: 200px;
+    width: 300px;
     
   }
   
   .card {
     height: 180px;
-    width: 400px;
+    width: 300px;
     position: absolute;
-    border: 10px solid #300;
-    transform-style: preserve-3d;
+    border: 1px solid #300;
+    color: rgb(36, 35, 35);
+    font-size: 1em;
     
   }
-  
-  
-  
-  .card .front {
-    height: 170px;
-    width: 400px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #353535;
-  }
-  
- 
-  
-  .name .card {
-    color: #fff;
-    font-size: 1em;
-  }
+
   
  

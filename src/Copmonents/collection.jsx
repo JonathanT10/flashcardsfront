@@ -2,18 +2,23 @@ import React from 'react';
 import './collection.css';
 
 function Collections (props) {
-let coll = props.card;
+let coll = props.collection;
+let btn = () => {
+    props.btn()
+}
+
     return(
         
 <div className='card-container'>
     <div className='card'>
-      <div className='front'>
+      
       {coll.map(coll => (
-              <button className='card'>{coll.name}</button>
-              ))}  
-
+          <tr className='card' key={coll.name}>
+       <button className='card' onClick={btn(coll.name.currentTarget)}>{coll.name}</button> 
+       </tr>
+      ))}
       </div>
-    </div>
+    
   </div>
    
     );

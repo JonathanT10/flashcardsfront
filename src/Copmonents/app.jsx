@@ -20,31 +20,42 @@ class App extends Component {
         let result = await axios.get("http://localhost:5000/api/collections");
         this.setState({
             collection: result.data
-        });
+        })
         console.log(this.state.collection);
     }
 
-    // collect(){
-    //     let collone = this.state.collection.pop();
-    //     console.log(collone);
-    //     return(collone);
+    // async componentDidMount(){
+    //     let result = await axios.get("http://localhost:5000/api/collections/608ab61699ee6440388b79fc");
+    //     this.setState({
+    //         history: result.data.cardCollection
+    //     });
+    //     console.log(this.state.history);
     // }
 
-    //  choice(){
-    //     let chocollect = this.state.collection.filter(function(coll)){
+     collButton(collName){
+        let pickedColl = this.state.collection.filter(collName => {
+            console.log(collName);
+            return collName;
+        })
+    }
 
-    //     }
-    // }
-  
+    nextButton() {
+
+    }
+    
+
     render() {
-        
+       
         return (
             <div>
             <h3><Nav /></h3>
             <h1>Flashcards</h1>
             <h2>Categorys:</h2>
             
-            <h2><Collections card={this.state.collection}/></h2>
+               <h2><Collections collection={this.state.collection} 
+                            btn={() => this.collButton()}/></h2> 
+                             <h2></h2>   
+             {/* <h2><Flashcard history={this.state.history}/></h2>  */}
             </div>
         );
     }
