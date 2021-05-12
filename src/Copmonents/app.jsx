@@ -33,7 +33,7 @@ class App extends Component {
     // }
 
    collButton(collName){
-       do{
+       
         let pickedColl = this.state.collection.filter(collName => {
             this.setState({
                 choice: collName.cardCollection
@@ -42,8 +42,7 @@ class App extends Component {
         
         return collName;
        })
-        }
-    while(this.state.choice = undefined);
+   
     }
    
 

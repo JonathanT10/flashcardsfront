@@ -4,18 +4,17 @@ import './collections.css';
 
 function Collections (props) {
 let coll = props.collection;
-let btn = () => {
-    props.btn()
-   }
+
+
 
     return(
         
 <div className='inline-button'>
     <div  className='button'>
       
-      {coll.map(coll => (
+      {coll.map( coll => (
           <tr className='button' key={coll.name}>
-       <button className='button' onClick={() => btn(coll.name.currentTarget)}>{coll.name}</button> 
+       <button className='button' onClick={() => props.btn(coll.name.eventTarget)}>{coll.name}</button> 
        </tr>
       
       ))}
