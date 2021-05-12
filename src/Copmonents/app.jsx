@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Nav from './Nav/nav';
-import Flashcard from './flashcard'
-import Collections from './collection';
+import Flashcard from '../Copmonents/flashcard/flashcard';
+import Collections from '../Copmonents/collections/collection';
 
 class App extends Component {
     constructor(props){
