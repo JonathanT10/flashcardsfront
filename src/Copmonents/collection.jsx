@@ -1,5 +1,5 @@
 import React from 'react';
-import './collection.css';
+import './collections.css';
 
 
 function Collections (props) {
@@ -7,15 +7,15 @@ let coll = props.collection;
 let btn = () => {
     props.btn()
    }
-   
+
     return(
         
-<div className='card-container'>
-    <div  className='card'>
+<div className='inline-button'>
+    <div  className='button'>
       
       {coll.map(coll => (
-          <tr className='card' key={coll.name}>
-       <button className='card' onClick={() => btn(coll.name.currentTarget)}>{coll.name}</button> 
+          <tr className='button' key={coll.name}>
+       <button className='button' onClick={() => btn(coll.name.currentTarget)}>{coll.name}</button> 
        </tr>
       
       ))}

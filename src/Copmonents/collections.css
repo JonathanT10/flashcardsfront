@@ -1,0 +1,14 @@
+.inline-button .button {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+    padding: 20%, 20%;
+}
+
+.inline-button {
+    display: table;
+    margin: 0 auto;
+}
+

@@ -47,7 +47,9 @@ class App extends Component {
     }
    
 
-  
+  nextCard = () => {
+
+  }
     
 
     render() {
@@ -61,7 +63,7 @@ class App extends Component {
                <h2><Collections collection={this.state.collection} 
                             btn={() => this.collButton()}/></h2> 
              
-               <h2><Flashcard category = {this.state.category}/></h2> 
+               <h2><Flashcard category = {this.state.choice}/></h2> 
             </div>
         );
     }

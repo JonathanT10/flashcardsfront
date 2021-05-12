@@ -3,11 +3,12 @@ import './flashcard.css';
 
 function Flashcard(props) {
     let card = props.category;
+    let idx = 0
     console.log(card);
     
     return (
       <div>
-      {card.map(cardC => (
+      {card.map( cardC => (
       <div className='card-container'>
       <div className='card'>
         <div className='front'>
